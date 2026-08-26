@@ -31,4 +31,3 @@ git push
 
 Une fois GitHub connecté à Vercel, chaque `git push` sur `main` déclenche automatiquement un nouveau déploiement.
 
-Test de connexion GitHub → Vercel.
