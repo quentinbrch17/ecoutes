@@ -1,0 +1,283 @@
+:root {
+  --bg: #f5f4f0;
+  --text: #1d1d1b;
+  --muted: #77736c;
+  --line: #d8d5ce;
+  --soft: #ece9e2;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+img { display: block; max-width: 100%; }
+
+.wrap {
+  width: min(calc(100% - 40px), var(--max));
+  margin-inline: auto;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.brand a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+main {
+  padding: 64px 0 88px;
+}
+
+.meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 16px 0 24px;
+  font-size: clamp(48px, 8vw, 76px);
+  line-height: .96;
+  letter-spacing: -.045em;
+  font-weight: 500;
+}
+
+.lede {
+  margin: 0 0 64px;
+  max-width: 680px;
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.list {
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 40px 82px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.n,
+.score {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.n {
+  align-self: start;
+  padding-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.score {
+  align-self: start;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cover-link {
+  text-decoration: none;
+}
+
+.cover {
+  width: 82px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--soft);
+}
+
+.cover-fallback {
+  display: grid;
+  place-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  letter-spacing: .08em;
+}
+
+.item h2 {
+  margin: 0 0 7px;
+  font-size: 25px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+.item div > a {
+  text-decoration: none;
+}
+
+.item p {
+  margin: 0;
+  color: #514f4a;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+article {
+  max-width: 700px;
+}
+
+.article-cover {
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: 28px 0 42px;
+}
+
+article h1 {
+  margin-bottom: 12px;
+}
+
+.authorline {
+  margin: 0 0 54px;
+  max-width: 620px;
+  color: #514f4a;
+  font-size: 21px;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.text {
+  max-width: 660px;
+}
+
+.text p {
+  margin: 0 0 24px;
+  font-size: 19px;
+  line-height: 1.72;
+}
+
+.text .pull {
+  margin: 44px 0;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 27px;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+}
+
+footer .wrap {
+  padding: 28px 0 36px;
+}
+
+@media (max-width: 680px) {
+  .wrap {
+    width: min(calc(100% - 28px), var(--max));
+  }
+
+  .brand {
+    min-height: 62px;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  main {
+    padding-top: 42px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .lede {
+    font-size: 18px;
+    margin-bottom: 46px;
+  }
+
+  .item {
+    grid-template-columns: 26px 68px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .cover {
+    width: 68px;
+  }
+
+  .score {
+    grid-column: 3;
+    margin-top: -8px;
+    color: var(--muted);
+  }
+
+  .item h2 {
+    font-size: 21px;
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+
+  .article-cover {
+    margin-bottom: 32px;
+  }
+
+  .authorline {
+    font-size: 18px;
+    margin-bottom: 42px;
+  }
+
+  .text p {
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  .text .pull {
+    font-size: 24px;
+  }
+}
